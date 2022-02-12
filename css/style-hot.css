@@ -1,0 +1,69 @@
+body {
+    background-color: pink;
+}
+
+.dau {
+    width: 2480px;
+    position: relative;
+}
+.dau>div{
+    float: left;
+}
+.style-1 {
+    width: 310px;
+    height: 360px;
+}
+.box{
+    width: 290px;
+    height: 340px;
+    margin: 7px auto;
+    border: 2px solid orange;
+    background-color: white;
+}
+body{
+    margin: 0px auto;
+}
+.style-1{
+    color: red;
+    text-align: center;
+    font-size: 30px;
+}
+.box{
+    position: relative;
+}
+.box>.may{
+    max-width: 85%;
+    height: 250px;
+}
+.box>.hot{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.click{
+    position: absolute;
+    top: 155px;
+    left: 1177px;
+}
+.click img{
+    width: 30px;
+    height: 30px;
+}
+.click-1{
+    position: absolute;
+    top: 155px;
+    right: 1180px;
+}
+.click-1 img{
+    width: 30px;
+    height: 30px;
+}
+.sale{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
