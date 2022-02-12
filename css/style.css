@@ -240,7 +240,7 @@ iframe[name=banner]{
 }
 .mui-ten>a{
     position: fixed;
-    top: 500px;
+    top: 85%;
     right: 30px;
 }
 iframe[name=hot]{
