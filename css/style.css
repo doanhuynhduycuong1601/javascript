@@ -221,19 +221,6 @@ ul ul{
 .menu-ngang .search>label>input{
     padding: 5px;
 }
-.menu-ngang .search>label>img{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
-.menu-ngang .search>div{
-    background-image: url(../image/search.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    float: right;
-    width: 20px;
-    height: 20px;
-}
 article{
     float: right;
     width: 93%;
