@@ -1,69 +1,73 @@
-body {
-    background-color: pink;
-}
-
-.dau {
-    width: 2480px;
-    position: relative;
-}
-.dau>div{
-    float: left;
-}
-.style-1 {
-    width: 310px;
-    height: 360px;
-}
-.box{
-    width: 290px;
-    height: 340px;
-    margin: 7px auto;
-    border: 2px solid orange;
-    background-color: white;
-}
 body{
-    margin: 0px auto;
+    margin: 0 auto;
+}
+@media all and (min-width: 300px){
+    .may{
+        height: 50px;
+    }
+    .box1>div{
+        font-size: 10px;
+    }
+}
+@media all and (min-width: 390px){
+    .may{
+        height: 85px;
+    }
+    .box1>div{
+        font-size: 15px;
+    }
+}
+@media all and (min-width: 700px){
+    .may{
+        height: 195px;
+    }
+    .box1>div{
+        font-size: 20px;
+    }
 }
 .style-1{
-    color: red;
-    text-align: center;
-    font-size: 30px;
+    width: 50%;
+    float: left;
+    position: relative;
+    
 }
-.box{
+.box-con{
+    float: left;
+    width: 25%;
+}
+.box1{
+    margin: 0 auto;
+    width: 95%;
+    text-align: center;
+    border: 2px solid orange;
+    color: red;
     position: relative;
 }
-.box>.may{
-    max-width: 85%;
-    height: 250px;
+.may{
+    width: 85%;
 }
-.box>.hot{
-    width: 50px;
-    height: 50px;
+.hot{
     position: absolute;
     top: 0px;
     right: 0px;
+    width: 15%;
+    height: 15%;
 }
-.click{
+.mui-ten-phai{
     position: absolute;
-    top: 155px;
-    left: 1177px;
+    top: 44%;
+    left: 98%;
 }
-.click img{
-    width: 30px;
-    height: 30px;
+.mui-ten-phai img{
+    width: 100%;
+    height: 100%;
 }
-.click-1{
+.mui-ten-trai{
     position: absolute;
-    top: 155px;
-    right: 1180px;
+    top: 44%;
+    left: 0.5%;
 }
-.click-1 img{
-    width: 30px;
-    height: 30px;
-}
-.sale{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
+.mui-ten-trai img{
+    width: 10%;
+    height: 10%;
 }

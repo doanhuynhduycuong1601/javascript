@@ -2,7 +2,43 @@ body{
     width: 100%;
     margin: 0px auto;
     position: relative;
-    /* background-color: pink; */
+    color: #333;
+}
+@media all and (min-width: 320px){
+    body{
+        font-size: 7px;
+    }
+    .menu-ngang a{
+        font-size: 9px;
+    }
+    iframe[name=hot]{
+        width: 100%;
+        height: 80px;
+    }
+}
+@media all and (min-width: 400px){
+    body{
+        font-size: 10px;
+    }
+    .menu-ngang a{
+        font-size: 11px;
+    }
+    iframe[name=hot]{
+        width: 100%;
+        height: 130px;
+    }
+}
+@media all and (min-width: 700px){
+    body{
+        font-size: 20px;
+    }
+    .menu-ngang a{
+        font-size: 30px;
+    }
+    iframe[name=hot]{
+        width: 100%;
+        height: 250px;
+    }
 }
 header{
     width: 100%;
@@ -143,14 +179,13 @@ ul ul{
     text-decoration: none;
     margin: 10px;
     display: block;
-    font-size: 30px;  
 }
 .menu-ngang>ul>li:hover>ul{
     display: block;
 }
 .menu-ngang>ul>li>ul{
     position: absolute;
-    width: 150px;
+    width: 200px;
 }
 .menu-ngang>ul>li>ul>li>a{
     background: url(../image/$.jpg) no-repeat left center;
@@ -189,7 +224,7 @@ ul ul{
 .menu-ngang .search>label>img{
     position: absolute;
     top: 0px;
-    right: 6px;
+    right: 0px;
 }
 .menu-ngang .search>div{
     background-image: url(../image/search.png);
@@ -200,12 +235,8 @@ ul ul{
     height: 20px;
 }
 article{
-    float: left;
-    width: 86%;
-}
-.hien{
-    width: 100%;
-    margin: 0px auto;
+    float: right;
+    width: 93%;
 }
 aside{
     float: left;
@@ -219,16 +250,6 @@ footer{
     color: red;
     position: relative;
 }
-.map{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 5%;
-}
-.map>a>img{
-    height: 50px;
-    width: 100%;
-}
 iframe[name=page]{
     width: 100%;
     height: 800px;
@@ -236,14 +257,10 @@ iframe[name=page]{
 }
 iframe[name=banner]{
     width: 100%;
-    height: 800px;
+    height: 300px;
 }
 .mui-ten>a{
     position: fixed;
     top: 85%;
     right: 30px;
-}
-iframe[name=hot]{
-    width: 100%;
-    height: 355px;
 }
