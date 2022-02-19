@@ -6,10 +6,10 @@ body{
 }
 @media all and (min-width: 320px){
     body{
-        font-size: 7px;
+        font-size: 17px;
     }
     .menu-ngang a{
-        font-size: 9px;
+        font-size: 19px;
     }
     iframe[name=hot]{
         width: 100%;
@@ -250,4 +250,8 @@ iframe[name=banner]{
     position: fixed;
     top: 85%;
     right: 30px;
+}
+iframe[name=noi_bat]{
+    width: 70%;
+    height: 290px;
 }
