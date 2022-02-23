@@ -7,6 +7,11 @@ body{
     float: left;
     margin-bottom: 10px;
 }
+.box>.computer:hover{
+    transition: all .3s linear;
+    transform: scale(1.02);
+    opacity: 0.8;
+}
 .box:hover{
     box-shadow: inset 0px 0px 30px;
 }

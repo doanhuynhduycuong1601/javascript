@@ -1,6 +1,7 @@
 body{
     margin: auto;
     background-color: pink;
+    scroll-behavior: smooth;
 }
 .container{
     width: 300%;
@@ -15,6 +16,11 @@ body{
 .box>img{
     width: 100%;
     height: 260px;
+}
+.box>img:hover{
+    transition: all .3s linear;
+    transform: scale(1.04);
+    opacity: 0.8;
 }
 .mui-ten-phai{
     position: absolute;
@@ -45,6 +51,6 @@ body{
     text-decoration: none;
     color: red;
 }
-.so>a:focus{
+.so>a:hover{
     background-color: aqua;
 }

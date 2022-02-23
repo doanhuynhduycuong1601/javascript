@@ -51,8 +51,8 @@ header>a>.theme{
 }
 header>ul>li{
     position: absolute;
-    top: 0px;
-    right: 2px;
+    top: 5px;
+    right: 10px;
 }
 .brand{
     position: absolute;
@@ -103,17 +103,17 @@ ul ul{
 }
 .menu-con>li{
     background-color: yellow;
+
 }
 .menu-con>li>a{
     color: red;
     text-decoration: none;
     display: block;
     width: 130px;
-
     line-height: 30px;
     border: 2px solid green;
 }
-.menu-con>li>a:hover{
+.menu-con>li:hover>a{
     color: blue;
     background-color: pink;
 }
@@ -177,33 +177,45 @@ ul ul{
 .menu-ngang>ul>li>a{
     color: red;
     text-decoration: none;
-    margin: 10px;
     display: block;
+    padding: 5px 15px;
+}
+.menu-ngang>ul>li:hover{
+    background-color: black;
+}
+.menu-ngang>ul>li:hover ul li:hover a{
+    background-color: lightblue;
+}
+.menu-ngang>ul>li{
+    margin:5px 10px;
+    font-size: 35px;
 }
 .menu-ngang>ul>li:hover>ul{
     display: block;
 }
 .menu-ngang>ul>li>ul{
     position: absolute;
-    width: 200px;
+    width: 240px;
 }
 .menu-ngang>ul>li>ul>li>a{
-    background: url(../image/$.jpg) no-repeat left center;
     padding: 5px 0px 5px 45px;
     line-height: 30px;
     border: 2px solid orange;
     display: block;
-    background-color: palegoldenrod;
     text-decoration: none;
     color: red;
 }
 .menu-ngang>ul>li>ul>li>a:hover{
     background-color: salmon;
-    color: blue;
+    color: green;
 }
 .menu-ngang>ul>li>ul>li>.gold{
     background: url(../image/gold.jpg) no-repeat left center;
     background-color: palegoldenrod;
+}
+.menu-ngang>ul>li>ul>li>.price{
+    background: url(../image/$.jpg) no-repeat left;
+    background-color: pink;
 }
 .menu-ngang>ul>li>ul>li>.bac{
     background: url(../image/bac.jpg) no-repeat left center;
