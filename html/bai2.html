@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form1 {
+            width: 400px;
+            margin: auto;
+            padding: 10px 40px;
+            background: whitesmoke;
+            border: 1px solid black;
+        }
+
+        #form1 .txt {
+            width: 400px;
+            padding: 6px;
+            border: solid 1px lightslategrey;
+        }
+
+        #form1 fieldset {
+            border: solid 1px lightslategrey;
+            margin-top: 0px;
+        }
+
+        #form1 #dangki {
+            width: 100px;
+            height: 40px;
+            border: none;
+            background-color: royalblue;
+            color: white;
+        }
+
+        #form1 #baoloi {
+            margin: 0px auto;   
+            color: red;
+        }
+
+        .loi {
+            width: 400px;
+            padding: 6px;
+            border: 1px solid red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1">
+        <h2>Đăng ký thành viên</h2>
+        <p>
+            <label>Mã Sinh viên</label><br>
+            <input id="masv" type="text" class="txt">
+        </p>
+        <p>
+            <label>Họ tên</label><br>
+            <input id="hoten" type="text" class="txt">
+        </p>
+        <p>
+            <label>Email</label><br>
+            <input id="email" type="email" class="txt">
+        </p>
+        <p>
+        <fieldset id="fs1">
+            <legend>Giới tính</legend>
+            <input type="radio" name="phai" value="Nam"><label>Nam</label>
+            <input type="radio" name="phai" value="Nữ"><label>Nư</label><br>
+        </fieldset>
+        </p>
+        <p>
+        <fieldset id="fs2">
+            <legend>Sỡ thích</legend>
+            <input type="checkbox" name="st"><label>đọc sách</label>
+            <input type="checkbox" name="st"><label>Du lịch</label>
+            <input type="checkbox" name="st"><label>Ẩm thực</label>
+            <input type="checkbox" name="st"><label>Âm nhạc</label>
+            <input type="checkbox" name="st"><label>Khác</label>
+        </fieldset>
+        </p>
+        <p>
+            <label>Quốc tịch</label><br>
+            <select id="quoctich" name="quoctich" class="txt">
+                <option value="" style="display: none;">Chọn quốc tịch</option>
+                <option value="1">Việt Nam</option>
+                <option value="2">Vũ hán</option>
+                <option value="3">Đông lào</option>
+            </select>
+        </p>
+        <p>
+            <label>Ghi chú</label><br>
+            <textarea id="ghichu" cols="54" rows="5" class="txt"></textarea>
+        </p>
+        <div id="baoloi"></div>
+        <button type="button" id="dangki" onclick="kiemtra();">Đăng kí</button>
+    </form>
+    <script>
+        function kiemtra() {
+            var loi = "";
+            var masv = document.getElementById("masv");
+            loi += check(masv, 'Mã sv');
+            var hoten = document.getElementById("hoten");
+            loi += check(hoten, 'Họ tên');
+            var email = document.getElementById("email");
+            loi += check(email, 'Email');
+            var gt = document.getElementsByName("phai");
+            loi += checkGT(gt,"fs1","Giới tính");
+            var hobby = document.getElementsByName("st");
+            loi += checkGT(hobby,"fs2","Sở thích");
+            var qt = document.getElementById("quoctich");
+            loi += check(qt,'Quốc tịch');
+            var gc = document.getElementById("ghichu");
+            loi += checkGC(gc,'Ghi chu');
+            if (loi != "") {
+                document.getElementById("baoloi").innerHTML = loi;
+                return false;
+            }
+        }
+        function checkGC(x,y){
+            if(x.value.length<30){
+                x.className = "loi";
+                return y + " :chưa nhập " + y + "<br>";
+            }else{
+                x.className = "txt";
+                return "";
+            }
+        }
+        function check(x, y) {
+            if (x.value == "") {
+                x.className = "loi";
+                return y + " :chưa nhập " + y + "<br>";
+            } else {
+                x.className = "txt";
+                return "";
+            }
+        }
+        function checkGT(x, y,z) {
+            var dem = 0;
+            for (let i = 0; i < x.length; i++) {
+                if (x[i].checked) dem++
+            }
+            if (dem == 0) {
+                document.getElementById(y).className = "loi";
+                return z+" : chưa chọn "+z +"<br>";
+            } else document.getElementById(y).className = "txt";
+            return "";
+        }
+    </script>
+</body>
+
+</html>

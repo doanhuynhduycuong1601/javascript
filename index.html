@@ -6,6 +6,33 @@
     <title>03-ps25442-cương</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .login {
+            /* width: 98%;
+            height: 600px; */
+            height: 100vh;
+            width: 97vw;
+            background-color: aqua;
+            position: fixed;
+            top: 0px;
+            left: 1vw;
+        }
+
+        #thongbao {
+            position: fixed;
+            top: 10px;
+            left: 200px;
+            text-decoration: none;
+            background-color: black;
+            color: white;
+            padding: 5px 20px;
+        }
+
+        #thongbao:hover {
+            color: red;
+            background-color: pink;
+        }
+    </style>
 
 </head>
 
@@ -24,25 +51,28 @@
         </div>
         <ul>
             <li>
-                <a target="page" href="html/dangki.html">
-                    <div class="logo-login"></div>
+                <a onclick="login()" href="#">
+                    <div id="thongbao-login" class="logo-login"></div>
                 </a>
+
             </li>
         </ul>
     </header>
-    <div style="position: relative;border: 2px solid orange;background-color: pink;"><iframe scrolling="no"
-            src="html/noi_bat.html" name="noi_bat" frameborder="0"></iframe>
 
-        <div style="position: absolute;top: 0px;right: 0px;width: 30%;height: 290px">
-            <img style="width: 100%;height: 290px;" src="image/image-noi-bat/4.png" alt="">
+    <div style="position: relative;border: 2px solid orange;background-color: pink;">
+        <iframe id="thongbao-anh" scrolling="no" src="html/bai1.html" name="noi_bat" frameborder="0"></iframe>
+
+        <div style="position: absolute;top: 0px;right: 0px;width: 30%;height: 310px">
+            <img style="width: 100%;height: 310px;" src="image/image-noi-bat/4.png" alt="">
         </div>
         <div style="position: absolute;left: 1px;top: -20px;">
             <img src="image/image-noi-bat/5.png" style="width: 100px;height: 50px;" alt="">
         </div>
+
     </div>
-    <nav class="menu-ngang">
+    <nav class="menu-ngang" id="ngang">
         <ul>
-            <li><a target="page" href="html/home.html">Home</a></li>
+            <li><a style="padding: 5px 0px;" target="page" href="html/home.html">Home</a></li>
             <li>|</li>
             <li><a target="page" href="html/news.html">News</a></li>
             <li>|</li>
@@ -59,11 +89,7 @@
             </li>
             <li>|</li>
             <li>
-                <a href="#">quality</a>
-                <ul>
-                    <li><a target="page" class="gold" href="html/26.html">Gold</a></li>
-                    <li><a target="page" class="bac" href="html/24.html">Silver</a></li>
-                </ul>
+                <a href="html/bai3.html" id="thongbao-hang" target="page">Bán hàng</a>
             </li>
         </ul>
 
@@ -98,11 +124,9 @@
         </ul>
     </div>
     <aside><iframe name="banner" scrolling="no" src="html/banner1.html" frameborder="0"></iframe></aside>
-
     <article>
         <div class="hien"><iframe src="html/ly_lich.html" frameborder="0" name="page"></iframe></div>
     </article>
-
     <aside><iframe name="banner" scrolling="no" src="html/banner3.html" frameborder="0"></iframe></aside>
     <div style="text-align: center;clear: both;color: red;">
         <h1>Sản phẩm hot</h1>
@@ -114,6 +138,7 @@
     </div>
     <div><iframe scrolling="no" src="html/sale.html" name="hot" frameborder="0"></iframe>
     </div>
+    <a href="#" onclick="thongbao()" id="thongbao">Hướng dẫn sử dụng</a>
     <!--like-->
     <div class="fb-like" data-href="http://127.0.0.1:5500/asm1/ASM/index.html" data-width="" data-layout="button_count"
         data-action="like" data-size="large" data-share="true"></div>
@@ -133,8 +158,46 @@
             <h1>Chăm sóc khách hàng</h1>
         </div>
     </footer>
+
+    <div class="login" style="display: none;" id="huongdan">
+        <img class="login" src="image/huongdan.png" alt="">
+    </div>
+    <div class="login" id="login" style="display: none;box-shadow: 0px 0px 1000px orange;">
+        <div style="width: 100%;position: relative;">
+            <a style="position: absolute;top: 0px;right: 25px;" href="#" onclick="exitlogin()"><img src="image/exit.jpg"
+                    alt="" style="width: 50px;height: 50px;"></a>
+            <iframe style="width: 100%;height: 600px;" src="html/bai2.html" frameborder="0"></iframe>
+        </div>
+        </form>
+    </div>
+
     <script src="https://uhchat.net/code.php?f=fdfdc3"></script>
     <div class="mui-ten"><a href="#dau"><img src="image/mui-ten.png" style="width: 30px;height: 30px;" alt=""></a>
+
+        <script>
+            function login() {
+                document.getElementById("login").style.display = "";
+            }
+            function exitlogin() {
+                document.getElementById("login").style.display = "none";
+            }
+            function thongbao() {
+                document.getElementById("thongbao-login").style.boxShadow = "-20px -10px 100px blue";
+                document.getElementById("thongbao-anh").style.boxShadow = "0px 0px 80px red";
+                document.getElementById("thongbao-hang").style.boxShadow = "0px 0px 80px aqua";
+                document.getElementById("huongdan").style.display = "";
+                setInterval('tatHuongDan()', 5000);
+                setInterval('tatBoxShadow()', 15000);
+            }
+            function tatHuongDan() {
+                        document.getElementById("huongdan").style.display = "none";
+            }
+            function tatBoxShadow(){
+                document.getElementById("thongbao-login").style.boxShadow = "";
+                document.getElementById("thongbao-anh").style.boxShadow = "";
+                document.getElementById("thongbao-hang").style.boxShadow = "";
+            }
+        </script>
 </body>
 
 </html>

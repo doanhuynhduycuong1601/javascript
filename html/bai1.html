@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="../css/bai1.css">
+    <style>
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            padding: 0 15px;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        img:hover{
+            transition: all .9s linear;
+    transform: scale(1.03);
+    opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+        <div id="slide">
+            <img id="anh" src="../image/image-noi-bat/1.png" alt="">
+            <div class="dieu_huong">
+                <i class="fa fa-chevron-circle-left" onclick="previous()"></i>
+                <i class="fa fa-chevron-circle-right" onclick="next()"></i>
+            </div>
+            <a href="#" id="so1" style="display: none;" onclick="run1(this)"></a>
+            <a href="#" id="so2" style="display: none;" onclick="run1(this)"></a>
+            <a href="#" style="background-color: aqua;" id="so3" onclick="run1(this)">0</a>
+            <a href="#" id="so4"  onclick="run1(this)">1</a>
+            <a href="#" id="so5" onclick="run1(this)">2</a>
+        </div>
+        <script src="../js/bai1.js"></script>
+</body>
+
+</html>

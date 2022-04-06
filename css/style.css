@@ -33,7 +33,19 @@ body{
         font-size: 20px;
     }
     .menu-ngang a{
-        font-size: 30px;
+        font-size: 14px;
+    }
+    iframe[name=hot]{
+        width: 100%;
+        height: 250px;
+    }
+}
+@media all and (min-width: 850px){
+    body{
+        font-size: 20px;
+    }
+    .menu-ngang a{
+        font-size: 18px;
     }
     iframe[name=hot]{
         width: 100%;
@@ -265,5 +277,6 @@ iframe[name=banner]{
 }
 iframe[name=noi_bat]{
     width: 70%;
-    height: 290px;
+    height: 305px;
 }
+
