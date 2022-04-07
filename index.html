@@ -181,13 +181,17 @@
             function exitlogin() {
                 document.getElementById("login").style.display = "none";
             }
+            var t;
+            var x;
             function thongbao() {
                 document.getElementById("thongbao-login").style.boxShadow = "-20px -10px 100px blue";
                 document.getElementById("thongbao-anh").style.boxShadow = "0px 0px 80px red";
                 document.getElementById("thongbao-hang").style.boxShadow = "0px 0px 80px aqua";
                 document.getElementById("huongdan").style.display = "";
-                setInterval('tatHuongDan()', 5000);
-                setInterval('tatBoxShadow()', 15000);
+                clearInterval(t);
+                clearInterval(x);
+                t=setInterval('tatHuongDan()', 5000);
+                x=setInterval('tatBoxShadow()', 15000);
             }
             function tatHuongDan() {
                         document.getElementById("huongdan").style.display = "none";
