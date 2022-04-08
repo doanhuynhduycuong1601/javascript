@@ -11,7 +11,7 @@ var arr_hinh = [
     
 ]
 var index = 0;
-
+var automatic = 0;
 
 
 
@@ -93,6 +93,7 @@ function kt(x) {
         document.getElementById("so4").innerHTML = (x+1);
         document.getElementById("so5").innerHTML = (x+2);
     }
+    automatic = 0;
 }
 function run1(a) {
     index = parseInt(a.innerText);
@@ -100,4 +101,10 @@ function run1(a) {
     hinh.src = arr_hinh[index];
     kt(index);
 }
-// setInterval("next()", 3000);
+function automatic1(){
+    automatic++;
+    if(automatic>=2){
+        next();
+    }
+}
+setInterval("automatic1()", 3000);
